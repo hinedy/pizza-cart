@@ -34,7 +34,7 @@ export default function Product(props) {
       <div className="flex justify-between my-3">
         <div>
           <p className="mt-1 text-lg font-medium text-gray-900">
-            $ {pizza.price}
+            ₹ {pizza.price}
           </p>
         </div>
         {inCart && inCart.amount >= 1 ? (

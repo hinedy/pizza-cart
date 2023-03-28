@@ -20,7 +20,7 @@ function Cart() {
       <div className="px-6">
         <div className="flex justify-between p-4">
           <h3>Total</h3>
-          <p>${total}</p>
+          <p>₹ {total}</p>
         </div>
         <button
           onClick={() => dispatch(clearCart())}
