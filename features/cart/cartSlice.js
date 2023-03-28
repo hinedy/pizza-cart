@@ -2,9 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     cartItems: [],
-    amount: 0,
     total: 0,
-    isLoading: true,
 }
 
 const cartSlice = createSlice({
@@ -26,7 +24,6 @@ const cartSlice = createSlice({
             state.cartItems = state.cartItems.filter(item => item.id !== payload.id)
         },
         updateTotal: (state) => {
-            state.amount = state.cartItems.reduce((acc, curr) => acc + curr.amount , 0)
             state.total = state.cartItems.reduce((acc, curr) => acc + (+curr.amount * +curr.price) , 0)
         },
         clearCart: (state) => {
